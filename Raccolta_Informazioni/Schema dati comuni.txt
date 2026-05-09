@@ -1,0 +1,144 @@
+sorgente 
+https://situas.istat.it/web/#/territorio/body?id=74&dateFrom=2020-12-31
+
+
+
+
+Id report:
+74
+Titolo report:
+Comuni - Dimensione
+Inizio/fine validità report:
+04/11/1951 - 09/05/2026
+Analisi temporale:
+DATA
+Ambito territoriale:
+Unità amministrative
+Unità territoriale:
+Comune
+Parametri necessari:
+pfun - pdata
+pfun: Id report
+pdata: data di estrazione (formato GG/MM/AAAA)
+Dati:
+https://situas-servizi.istat.it/publish/reportspooljson?pfun=74&pdata=04/11/1951
+Conteggio:
+https://situas-servizi.istat.it/publish/reportspooljsoncount?pfun=74&pdata=04/11/1951
+Metadati:
+https://situas-servizi.istat.it/publish/anagrafica_report_metadato_web?pfun=74&pdata=04/11/1951
+
+
+
+{
+    "REPORT NAME": "Comuni - Dimensione",
+    "REPORT DESCRIZIONE": "Il report restituisce la lista dei comuni esistenti alla data selezionata e la relativa dimensione in termini di ampiezza demografica (popolazione residente e legale) e di estensione territoriale (superficie in kmq). Ogni unità è identificata dalla denominazione e dal codice statistico. Il dato sulla popolazione legale viene reso disponibile a partire dal IX Censimento generale della popolazione (4 novembre 1951), quello sulla popolazione residente dal 31 dicembre 2001 mentre la superficie territoriale a partire dal XIV Censimento generale della popolazione e delle abitazioni (21 ottobre 2001).",
+    "COL_DETAILS": [
+        {
+            "COLNAME": "COD_RIP",
+            "LABEL": "Codice Ripartizione geografica",
+            "NOTE": "Note non presenti",
+            "LINK": "",
+            "GUIDA": "Codice Istat della Ripartizione geografica secondo la suddivisione del territorio nazionale in: 1) Nord-ovest, 2) Nord-est, 3) Centro, 4) Sud e 5) Isole.",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "NUMBER"
+        },
+        {
+            "COLNAME": "COD_REG",
+            "LABEL": "Codice Regione",
+            "NOTE": "Valore  di due caratteri alfanumerici, con validità nell'intervallo  01- 20.",
+            "LINK": "",
+            "GUIDA": "Codice Istat della Regione.",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "VARCHAR"
+        },
+        {
+            "COLNAME": "COD_UTS",
+            "LABEL": "Codice Provincia/Uts",
+            "NOTE": "Codice di tre caratteri alfanumerici con validità nell’intervallo 001-119 per le Province. Restano assegnati ai Liberi consorzi i codici delle omonime ex Province (validi nell'intervallo 081-089). Il codice delle Città metropolitane è, invece, creato sommando '200' al codice della Provincia corrispondente. Ai soli fini statistici, permangono i codici delle soppresse Province del Friuli-Venezia Giulia, cessate secondo le modalità espresse con Legge regionale 20/2016.",
+            "LINK": "",
+            "GUIDA": "Codice Istat della Provincia o Unità territoriale sovracomunale (Uts). Le unità territoriali sovracomunali, definite a fini statistici, ricomprendono, a partire dal 2015, oltre le Province anche le Città metropolitane, i Liberi consorzi e le unità non amministrative (ex Province del Friuli-Venezia Giulia).",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "VARCHAR"
+        },
+        {
+            "COLNAME": "PRO_COM_T",
+            "LABEL": "Codice Comune (alfanumerico)",
+            "NOTE": "Note non presenti",
+            "LINK": "",
+            "GUIDA": "Codice Istat del Comune di sei caratteri in formato alfanumerico",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "VARCHAR"
+        },
+        {
+            "COLNAME": "PRO_COM",
+            "LABEL": "Codice Comune (numerico)",
+            "NOTE": "Note non presenti",
+            "LINK": "",
+            "GUIDA": "Codice Istat del Comune di sei caratteri in formato numerico",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "NUMBER"
+        },
+        {
+            "COLNAME": "COMUNE",
+            "LABEL": "Comune",
+            "NOTE": "La denominazione ufficiale dei comuni della Provincia di Bolzano/Bozen e di alcuni comuni dell Friuli-Venezia Giulia è definita dall'associazione del nome italiano a quello straniero. Per le denominazioni bilingue è previsto l'uso del simbolo separatore: \"/\" per i comuni della Provincia di Bolzano/Bozen, e \"-\" per tutti gli altri.",
+            "LINK": "",
+            "GUIDA": "Denominazione del Comune in lingua italiana e straniera",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "VARCHAR"
+        },
+        {
+            "COLNAME": "COMUNE_A",
+            "LABEL": "Comune (dizione straniera)",
+            "NOTE": "Note non presenti",
+            "LINK": "",
+            "GUIDA": "Denominazione del Comune in lingua diversa dall'italiano",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "VARCHAR"
+        },
+        {
+            "COLNAME": "SIGLA_AUTOMOBILISTICA",
+            "LABEL": "Sigla automobilistica",
+            "NOTE": "Note non presenti",
+            "LINK": " ",
+            "GUIDA": "Sigla automobilistica della Provincia, e dal 2015 della Città metropolitana, Libero consorzio o unità non amministrativa.",
+            "FORMATMASK": "",
+            "FONTE": "Motorizzazione",
+            "TYPE": "VARCHAR"
+        },
+        {
+            "COLNAME": "POP_LEG",
+            "LABEL": "Popolazione legale",
+            "NOTE": "Per i comuni istituiti o interessati rispettivamente da processi di fusione o incorporazione di comuni soppressi, la popolazione alla data del  Censimento generale della popolazione è ricostruita per somma. Per i comuni interessati da eventi di cessioni e/o acquisizioni di porzioni di territorio la popolazione legale è ricostruita secondo i dati trasmessi dai Comuni interessati.",
+            "LINK": " ",
+            "GUIDA": "Popolazione residente legale alla data del Censimento di riferimento determinata con Decreto del Presidente della Repubblica.",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "NUMBER"
+        },
+        {
+            "COLNAME": "ANNO_CENSIMENTO",
+            "LABEL": "Anno Censimento",
+            "NOTE": "Note non presenti",
+            "LINK": " ",
+            "GUIDA": "Anno di riferimento dei dati",
+            "FORMATMASK": "",
+            "FONTE": "Istat",
+            "TYPE": "VARCHAR"
+        }
+    ]
+}
+
+
+
+
+
+
+
