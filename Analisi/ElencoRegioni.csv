@@ -1,0 +1,221 @@
+,anno_riferimento,COD_RIP,COD_REG,DEN_REG
+0,2015,1,1,Piemonte
+1,2015,1,2,Valle d'Aosta/Vallée d'Aoste
+2,2015,1,3,Lombardia
+3,2015,2,4,Trentino-Alto Adige/Südtirol
+4,2015,2,5,Veneto
+5,2015,2,6,Friuli-Venezia Giulia
+6,2015,1,7,Liguria
+7,2015,2,8,Emilia-Romagna
+8,2015,3,9,Toscana
+9,2015,3,10,Umbria
+10,2015,3,11,Marche
+11,2015,3,12,Lazio
+12,2015,4,13,Abruzzo
+13,2015,4,14,Molise
+14,2015,4,15,Campania
+15,2015,4,16,Puglia
+16,2015,4,17,Basilicata
+17,2015,4,18,Calabria
+18,2015,5,19,Sicilia
+19,2015,5,20,Sardegna
+20,2016,1,1,Piemonte
+21,2016,1,2,Valle d'Aosta/Vallée d'Aoste
+22,2016,1,3,Lombardia
+23,2016,2,4,Trentino-Alto Adige/Südtirol
+24,2016,2,5,Veneto
+25,2016,2,6,Friuli-Venezia Giulia
+26,2016,1,7,Liguria
+27,2016,2,8,Emilia-Romagna
+28,2016,3,9,Toscana
+29,2016,3,10,Umbria
+30,2016,3,11,Marche
+31,2016,3,12,Lazio
+32,2016,4,13,Abruzzo
+33,2016,4,14,Molise
+34,2016,4,15,Campania
+35,2016,4,16,Puglia
+36,2016,4,17,Basilicata
+37,2016,4,18,Calabria
+38,2016,5,19,Sicilia
+39,2016,5,20,Sardegna
+40,2017,1,1,Piemonte
+41,2017,1,2,Valle d'Aosta/Vallée d'Aoste
+42,2017,1,3,Lombardia
+43,2017,2,4,Trentino-Alto Adige/Südtirol
+44,2017,2,5,Veneto
+45,2017,2,6,Friuli-Venezia Giulia
+46,2017,1,7,Liguria
+47,2017,2,8,Emilia-Romagna
+48,2017,3,9,Toscana
+49,2017,3,10,Umbria
+50,2017,3,11,Marche
+51,2017,3,12,Lazio
+52,2017,4,13,Abruzzo
+53,2017,4,14,Molise
+54,2017,4,15,Campania
+55,2017,4,16,Puglia
+56,2017,4,17,Basilicata
+57,2017,4,18,Calabria
+58,2017,5,19,Sicilia
+59,2017,5,20,Sardegna
+60,2018,1,1,Piemonte
+61,2018,1,2,Valle d'Aosta/Vallée d'Aoste
+62,2018,1,3,Lombardia
+63,2018,2,4,Trentino-Alto Adige/Südtirol
+64,2018,2,5,Veneto
+65,2018,2,6,Friuli-Venezia Giulia
+66,2018,1,7,Liguria
+67,2018,2,8,Emilia-Romagna
+68,2018,3,9,Toscana
+69,2018,3,10,Umbria
+70,2018,3,11,Marche
+71,2018,3,12,Lazio
+72,2018,4,13,Abruzzo
+73,2018,4,14,Molise
+74,2018,4,15,Campania
+75,2018,4,16,Puglia
+76,2018,4,17,Basilicata
+77,2018,4,18,Calabria
+78,2018,5,19,Sicilia
+79,2018,5,20,Sardegna
+80,2019,1,1,Piemonte
+81,2019,1,2,Valle d'Aosta/Vallée d'Aoste
+82,2019,1,3,Lombardia
+83,2019,2,4,Trentino-Alto Adige/Südtirol
+84,2019,2,5,Veneto
+85,2019,2,6,Friuli-Venezia Giulia
+86,2019,1,7,Liguria
+87,2019,2,8,Emilia-Romagna
+88,2019,3,9,Toscana
+89,2019,3,10,Umbria
+90,2019,3,11,Marche
+91,2019,3,12,Lazio
+92,2019,4,13,Abruzzo
+93,2019,4,14,Molise
+94,2019,4,15,Campania
+95,2019,4,16,Puglia
+96,2019,4,17,Basilicata
+97,2019,4,18,Calabria
+98,2019,5,19,Sicilia
+99,2019,5,20,Sardegna
+100,2020,1,1,Piemonte
+101,2020,1,2,Valle d'Aosta/Vallée d'Aoste
+102,2020,1,3,Lombardia
+103,2020,2,4,Trentino-Alto Adige/Südtirol
+104,2020,2,5,Veneto
+105,2020,2,6,Friuli-Venezia Giulia
+106,2020,1,7,Liguria
+107,2020,2,8,Emilia-Romagna
+108,2020,3,9,Toscana
+109,2020,3,10,Umbria
+110,2020,3,11,Marche
+111,2020,3,12,Lazio
+112,2020,4,13,Abruzzo
+113,2020,4,14,Molise
+114,2020,4,15,Campania
+115,2020,4,16,Puglia
+116,2020,4,17,Basilicata
+117,2020,4,18,Calabria
+118,2020,5,19,Sicilia
+119,2020,5,20,Sardegna
+120,2021,1,1,Piemonte
+121,2021,1,2,Valle d'Aosta/Vallée d'Aoste
+122,2021,1,3,Lombardia
+123,2021,2,4,Trentino-Alto Adige/Südtirol
+124,2021,2,5,Veneto
+125,2021,2,6,Friuli-Venezia Giulia
+126,2021,1,7,Liguria
+127,2021,2,8,Emilia-Romagna
+128,2021,3,9,Toscana
+129,2021,3,10,Umbria
+130,2021,3,11,Marche
+131,2021,3,12,Lazio
+132,2021,4,13,Abruzzo
+133,2021,4,14,Molise
+134,2021,4,15,Campania
+135,2021,4,16,Puglia
+136,2021,4,17,Basilicata
+137,2021,4,18,Calabria
+138,2021,5,19,Sicilia
+139,2021,5,20,Sardegna
+140,2022,1,1,Piemonte
+141,2022,1,2,Valle d'Aosta/Vallée d'Aoste
+142,2022,1,3,Lombardia
+143,2022,2,4,Trentino-Alto Adige/Südtirol
+144,2022,2,5,Veneto
+145,2022,2,6,Friuli-Venezia Giulia
+146,2022,1,7,Liguria
+147,2022,2,8,Emilia-Romagna
+148,2022,3,9,Toscana
+149,2022,3,10,Umbria
+150,2022,3,11,Marche
+151,2022,3,12,Lazio
+152,2022,4,13,Abruzzo
+153,2022,4,14,Molise
+154,2022,4,15,Campania
+155,2022,4,16,Puglia
+156,2022,4,17,Basilicata
+157,2022,4,18,Calabria
+158,2022,5,19,Sicilia
+159,2022,5,20,Sardegna
+160,2023,1,1,Piemonte
+161,2023,1,2,Valle d'Aosta/Vallée d'Aoste
+162,2023,1,3,Lombardia
+163,2023,2,4,Trentino-Alto Adige/Südtirol
+164,2023,2,5,Veneto
+165,2023,2,6,Friuli-Venezia Giulia
+166,2023,1,7,Liguria
+167,2023,2,8,Emilia-Romagna
+168,2023,3,9,Toscana
+169,2023,3,10,Umbria
+170,2023,3,11,Marche
+171,2023,3,12,Lazio
+172,2023,4,13,Abruzzo
+173,2023,4,14,Molise
+174,2023,4,15,Campania
+175,2023,4,16,Puglia
+176,2023,4,17,Basilicata
+177,2023,4,18,Calabria
+178,2023,5,19,Sicilia
+179,2023,5,20,Sardegna
+180,2024,1,1,Piemonte
+181,2024,1,2,Valle d'Aosta/Vallée d'Aoste
+182,2024,1,3,Lombardia
+183,2024,2,4,Trentino-Alto Adige/Südtirol
+184,2024,2,5,Veneto
+185,2024,2,6,Friuli-Venezia Giulia
+186,2024,1,7,Liguria
+187,2024,2,8,Emilia-Romagna
+188,2024,3,9,Toscana
+189,2024,3,10,Umbria
+190,2024,3,11,Marche
+191,2024,3,12,Lazio
+192,2024,4,13,Abruzzo
+193,2024,4,14,Molise
+194,2024,4,15,Campania
+195,2024,4,16,Puglia
+196,2024,4,17,Basilicata
+197,2024,4,18,Calabria
+198,2024,5,19,Sicilia
+199,2024,5,20,Sardegna
+200,2025,1,1,Piemonte
+201,2025,1,2,Valle d'Aosta/Vallée d'Aoste
+202,2025,1,3,Lombardia
+203,2025,2,4,Trentino-Alto Adige/Südtirol
+204,2025,2,5,Veneto
+205,2025,2,6,Friuli-Venezia Giulia
+206,2025,1,7,Liguria
+207,2025,2,8,Emilia-Romagna
+208,2025,3,9,Toscana
+209,2025,3,10,Umbria
+210,2025,3,11,Marche
+211,2025,3,12,Lazio
+212,2025,4,13,Abruzzo
+213,2025,4,14,Molise
+214,2025,4,15,Campania
+215,2025,4,16,Puglia
+216,2025,4,17,Basilicata
+217,2025,4,18,Calabria
+218,2025,5,19,Sicilia
+219,2025,5,20,Sardegna

@@ -115,7 +115,7 @@ def RecuperaESalvaDatiIstatSingoloAnno(codiceReport:str, anno: int, prefisso_fil
 # ===================================================================================
 #
 # logica di estrazione dei dati per periodo di analisi
-def RecuperaESalvaDatiIstat(codiceReport:str, prefisso_file:str, ambito: str  ):
+def RecuperaESalvaDatiIstat(codiceReport:str, prefisso_file:str, ambito: str ):
     inizio_anno: int = pd_config.GetAnnoInizioAnalisi() 
     nr_anni: int = pd_config.GetNrAnniAnalisi()
 
@@ -128,3 +128,42 @@ def RecuperaESalvaDatiIstat(codiceReport:str, prefisso_file:str, ambito: str  ):
         anno_esportazione= anno_esportazione+1
 
     print("Fine esportazione dati {ambito} per anno")
+
+
+
+   
+# ===================================================================================
+# ===================================================================================
+#
+# logica di estrazione dei dati per periodo di analisi
+def RecuperaESalvaDatiIstatUnicaRichiesta(urlUnico:str, prefisso_file:str, ambito: str ):
+    print(f"Avvio esportazione dati {ambito} per anno")
+    RecuperaESalvaDatiUnicaRichiesta(urlUnico,prefisso_file)
+    print("Fine esportazione dati {ambito} per anno")
+
+
+
+
+
+# ===================================================================================
+# ===================================================================================
+#
+# recupera dato da API e lo salva
+def RecuperaESalvaDatiUnicaRichiesta(urlUnico : str, prefisso_nome_file: int):
+
+    print('   Recupero  dati '+ urlUnico)
+    #eseguo la richiesta con Verbo Http GET e con l'aggiunta dell'header nella sezione della richiesta 
+    rq_api = api.get(urlUnico)
+    
+    #lettura risposta
+    status_code_risposta= rq_api.status_code
+    print (f"      status_code_risposta : {status_code_risposta}")
+    if(status_code_risposta!=200):
+        print(f'      errore richiesta api: status_code_risposta : {status_code_risposta}')
+    else:
+        print('      Converto i dati json ricevuti in DataFrame')
+        df_unico = pd.DataFrame.from_dict(rq_api.json()['resultset'])
+
+        nomefile=f"{prefisso_nome_file}_All" 
+        print(f'      Salvo i dati in CSV su FS. Nome file={nomefile}')
+        pd_common.SalvaDataset(df_unico,nomefile,True)
