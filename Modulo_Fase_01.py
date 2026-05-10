@@ -22,6 +22,16 @@ from io import StringIO
 from os import listdir
 from os.path import isfile, join
 
+# =============================================================
+# =============================================================
+#
+#parametri di configurazione
+import Modulo_Configurazione as config
+
+
+# ===================================================================================
+# ===================================================================================
+#
 #ottengo il folder dove salvo i dati di tipo data
 def GetFolderDati():
     folderdati = os.getcwd() 
@@ -29,6 +39,10 @@ def GetFolderDati():
     return folderdati
 
 
+
+# ===================================================================================
+# ===================================================================================
+#
 # cancella il file se esiste
 def CancellaFileSeEsiste(fullfilename: str):
      # verifico se esiste una precedente versione del file
@@ -40,7 +54,9 @@ def CancellaFileSeEsiste(fullfilename: str):
         print(f"      Il file '{fullfilename}' non esiste")
 
 
-
+# ===================================================================================
+# ===================================================================================
+#
 # salva il file nella cartella (estensione csv la inserisce la funzione)
 def SalvaDataset(dati: DataFrame, nomefile: str):
     full_file_name = GetFolderDati() +  f'/{nomefile}.csv'
@@ -53,6 +69,10 @@ def SalvaDataset(dati: DataFrame, nomefile: str):
     print(f"      Il file salvato {full_file_name}")
 
 
+
+# ===================================================================================
+# ===================================================================================
+#
 # recupera dato da API e lo salva
 def RecuperaESalvaDatiPerAnno(urldatiSenzaFiltroAnno : str, anno: int,prefisso_nome_file: int):
     #url completo
@@ -79,14 +99,18 @@ def RecuperaESalvaDatiPerAnno(urldatiSenzaFiltroAnno : str, anno: int,prefisso_n
         SalvaDataset(df_anno,nomefile)
 
 
-
+# ===================================================================================
+# ===================================================================================
+#
 #aggregazione dataframe dei comuni
 #per errore non lho fatto prima quando recuperavo il dataset per cui lo faccio ora
 def UnioneOrizzontaleDataFrame(dataframe_a: DataFrame, dataframe_b: DataFrame):
     return pd.concat([dataframe_a,dataframe_b])
 
 
-
+# ===================================================================================
+# ===================================================================================
+#
 def UnioneFileCsvPerAnno(prefisso_file_Senza_Anno: str):   
    folderdati = GetFolderDati()
    #print(f"Cartella dati: {folderdati}")  ok testato
@@ -118,16 +142,24 @@ def UnioneFileCsvPerAnno(prefisso_file_Senza_Anno: str):
    SalvaDataset(risultato, f"{prefisso_file_Senza_Anno}_All")
 
 
-
-
+# ===================================================================================
+# ===================================================================================
+#
+# logica di estrazione e salvataggio report per singolo anno
 def RecuperaESalvaDatiIstatSingoloAnno(codiceReport:str, anno: int, prefisso_file:str):
 
     RecuperaESalvaDatiPerAnno(f"https://situas-servizi.istat.it/publish/reportspooljson?pfun={codiceReport}",
                               anno,
                               prefisso_file)
     
+# ===================================================================================
+# ===================================================================================
+#
+# logica di estrazione dei dati per periodo di analisi
+def RecuperaESalvaDatiIstat(codiceReport:str, prefisso_file:str, ambito: str  ):
+    inizio_anno: int = config.GetAnnoInizioAnalisi() 
+    nr_anni: int = config.GetNrAnniAnalisi()
 
-def RecuperaESalvaDatiIstat(codiceReport:str, prefisso_file:str, ambito: str, inizio_anno: int, nr_anni: int, ):
     #considero una finestra temporale di 10 anni.
     print(f"Avvio esportazione dati {ambito} per anno")
     anno_esportazione= inizio_anno
