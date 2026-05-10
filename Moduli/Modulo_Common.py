@@ -20,7 +20,7 @@ from os.path import isfile, join
 # =============================================================
 #
 #parametri di configurazione
-import Moduli.Modulo_Configurazione as config
+import Modulo_Configurazione as config
 
 
 # ===================================================================================
@@ -67,7 +67,7 @@ def SalvaDataset(dati: DataFrame, nomefile: str, ambienteDati: bool):
     #full_file_name =  f'/{nomefile}.csv'
     full_file_name =  GetFolderDati()
     if (not ambienteDati):
-        full_file_name =  GetFolderAnalisi()    
+        full_file_name =  GetFolderAnalisi()
 
     full_file_name +=  f'/{nomefile}.csv'
 
