@@ -26,47 +26,14 @@ from os.path import isfile, join
 # =============================================================
 #
 #parametri di configurazione
-import Modulo_Configurazione as config
+import Modulo_Configurazione as pd_config
 
-
-# ===================================================================================
-# ===================================================================================
+# =============================================================
+# =============================================================
 #
-#ottengo il folder dove salvo i dati di tipo data
-def GetFolderDati():
-    folderdati = os.getcwd() 
-    folderdati =folderdati+ "\\Data" 
-    return folderdati
+#funzioni comuni
+import Modulo_Common as pd_common
 
-
-
-# ===================================================================================
-# ===================================================================================
-#
-# cancella il file se esiste
-def CancellaFileSeEsiste(fullfilename: str):
-     # verifico se esiste una precedente versione del file
-    if os.path.exists(fullfilename):
-        print(f"         Il file '{fullfilename}' esiste, per cui lo rimuovo")
-        #cancello il file
-        os.remove(fullfilename)
-    else:
-        print(f"      Il file '{fullfilename}' non esiste")
-
-
-# ===================================================================================
-# ===================================================================================
-#
-# salva il file nella cartella (estensione csv la inserisce la funzione)
-def SalvaDataset(dati: DataFrame, nomefile: str):
-    full_file_name = GetFolderDati() +  f'/{nomefile}.csv'
-
-    print(f"      path completo file:  {full_file_name}")
-    CancellaFileSeEsiste(full_file_name)
-    
-    #salvo il file perchè sarà usato in seguito per tutti i processi successivi
-    dati.to_csv(full_file_name)
-    print(f"      Il file salvato {full_file_name}")
 
 
 
@@ -96,23 +63,15 @@ def RecuperaESalvaDatiPerAnno(urldatiSenzaFiltroAnno : str, anno: int,prefisso_n
 
         nomefile=f"{prefisso_nome_file}_{str(anno)}" 
         print(f'      Salvo i dati in CSV su FS. Nome file={nomefile}')
-        SalvaDataset(df_anno,nomefile)
+        pd_common.SalvaDataset(df_anno,nomefile,True)
 
-
-# ===================================================================================
-# ===================================================================================
-#
-#aggregazione dataframe dei comuni
-#per errore non lho fatto prima quando recuperavo il dataset per cui lo faccio ora
-def UnioneOrizzontaleDataFrame(dataframe_a: DataFrame, dataframe_b: DataFrame):
-    return pd.concat([dataframe_a,dataframe_b])
 
 
 # ===================================================================================
 # ===================================================================================
 #
 def UnioneFileCsvPerAnno(prefisso_file_Senza_Anno: str):   
-   folderdati = GetFolderDati()
+   folderdati = pd_common.GetFolderDati()
    #print(f"Cartella dati: {folderdati}")  ok testato
 
    elencoelementi =os.listdir(folderdati)
@@ -139,7 +98,7 @@ def UnioneFileCsvPerAnno(prefisso_file_Senza_Anno: str):
       risultato = pd.concat([risultato,nuovofile])
      
    print(f"file: {prefisso_file_Senza_Anno}_All")
-   SalvaDataset(risultato, f"{prefisso_file_Senza_Anno}_All")
+   pd_common.SalvaDataset(risultato, f"{prefisso_file_Senza_Anno}_All",True)
 
 
 # ===================================================================================
@@ -157,8 +116,8 @@ def RecuperaESalvaDatiIstatSingoloAnno(codiceReport:str, anno: int, prefisso_fil
 #
 # logica di estrazione dei dati per periodo di analisi
 def RecuperaESalvaDatiIstat(codiceReport:str, prefisso_file:str, ambito: str  ):
-    inizio_anno: int = config.GetAnnoInizioAnalisi() 
-    nr_anni: int = config.GetNrAnniAnalisi()
+    inizio_anno: int = pd_config.GetAnnoInizioAnalisi() 
+    nr_anni: int = pd_config.GetNrAnniAnalisi()
 
     #considero una finestra temporale di 10 anni.
     print(f"Avvio esportazione dati {ambito} per anno")
