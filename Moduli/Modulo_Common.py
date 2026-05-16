@@ -63,7 +63,7 @@ def CancellaFileSeEsiste(fullfilename: str):
 # ===================================================================================
 #
 # salva il file nella cartella (estensione csv la inserisce la funzione)
-def SalvaDataset(dati: DataFrame, nomefile: str, ambienteDati: bool):
+def SalvaDataset(dati, nomefile: str, ambienteDati: bool):
     #full_file_name =  f'/{nomefile}.csv'
     full_file_name =  GetFolderDati()
     if (not ambienteDati):
@@ -86,6 +86,6 @@ def SalvaDataset(dati: DataFrame, nomefile: str, ambienteDati: bool):
 #
 #aggregazione dataframe dei comuni
 #per errore non lho fatto prima quando recuperavo il dataset per cui lo faccio ora
-def UnioneOrizzontaleDataFrame(dataframe_a: DataFrame, dataframe_b: DataFrame):
+def UnioneOrizzontaleDataFrame(dataframe_a, dataframe_b):
     return pd.concat([dataframe_a,dataframe_b])
 
