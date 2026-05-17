@@ -3,7 +3,7 @@
 #
 # anno di inizio analisi
 def GetAnnoInizioAnalisi():
-    return 2015
+    return 2010
 
 
 
@@ -12,4 +12,4 @@ def GetAnnoInizioAnalisi():
 #
 # nr di anni di analisi
 def GetNrAnniAnalisi():
-    return 11
+    return 16
