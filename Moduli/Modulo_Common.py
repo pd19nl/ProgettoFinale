@@ -89,3 +89,14 @@ def SalvaDataset(dati, nomefile: str, ambienteDati: bool):
 def UnioneOrizzontaleDataFrame(dataframe_a, dataframe_b):
     return pd.concat([dataframe_a,dataframe_b])
 
+
+# ===================================================================================
+# ===================================================================================
+#
+#array to datase
+def SalvaArray(datiArray, nomefile: str, ambienteDati: bool):
+    dfArray = pd.DataFrame({
+                            "row_num": range(len(datiArray)),
+                            "valoreArray": datiArray
+                        })
+    SalvaDataset(dfArray,nomefile,ambienteDati)
